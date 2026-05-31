@@ -1,4 +1,0 @@
-interface:
-  display_name: "Prompt Industrializer Skill"
-  short_description: "Turn simple prompts into reusable YAML rule prompts"
-  default_prompt: "Use $prompt-industrializer-skill to convert this simple prompt into an industrialized YAML rule prompt."
