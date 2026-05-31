@@ -1,5 +1,5 @@
 ---
-name: prompt-industrializer
+name: prompt-industrializer-skill
 description: Convert ordinary prompts into reusable industrialized YAML rule prompts. Use when the user asks to standardize, structure, industrialize, normalize, or refactor a simple prompt into an annotated YAML prompt contract with sections such as metadata comments, role, task_description, input, processing_rules, and output_format; also use for Chinese requests like "简单prompt转工业化规整prompt", "YAML规则提示词", "提示词规整", or "把这个prompt工业化".
 ---
 

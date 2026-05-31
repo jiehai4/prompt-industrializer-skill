@@ -1,12 +1,8 @@
-# Created Skills
+# prompt-industrializer-skill
 
-这个仓库用于公开分享可复用的 Codex skills。目前包含：
+把普通 prompt 转换为可复用、工业化规整的 YAML 规则提示词。
 
-- `prompt-industrializer`: 将普通 prompt 转换为可复用、工业化规整的 YAML 规则提示词。
-
-## prompt-industrializer
-
-`prompt-industrializer` 适用于这些场景：
+这个仓库是一个可直接安装的 Codex skill。它适用于：
 
 - 把简单 prompt 改写成结构化 YAML 提示词
 - 生成包含 `role`、`task_description`、`input`、`processing_rules`、`output_format` 的提示词契约
@@ -16,29 +12,28 @@
 ## 目录结构
 
 ```text
-created_skills/
+prompt-industrializer-skill/
 ├── README.md
 ├── LICENSE
-└── prompt-industrializer/
-    ├── SKILL.md
-    └── agents/
-        └── openai.yaml
+├── SKILL.md
+└── agents/
+    └── openai.yaml
 ```
 
 ## 安装
 
-把 `prompt-industrializer` 文件夹复制到你的 Codex skills 目录。
+把整个 `prompt-industrializer-skill` 文件夹复制到你的 Codex skills 目录。
 
 Windows:
 
 ```powershell
-Copy-Item -Path .\prompt-industrializer -Destination "$env:USERPROFILE\.codex\skills\prompt-industrializer" -Recurse -Force
+Copy-Item -Path .\prompt-industrializer-skill -Destination "$env:USERPROFILE\.codex\skills\prompt-industrializer-skill" -Recurse -Force
 ```
 
 macOS / Linux:
 
 ```bash
-cp -R ./prompt-industrializer ~/.codex/skills/prompt-industrializer
+cp -R ./prompt-industrializer-skill ~/.codex/skills/prompt-industrializer-skill
 ```
 
 ## 使用示例
@@ -46,7 +41,7 @@ cp -R ./prompt-industrializer ~/.codex/skills/prompt-industrializer
 在 Codex 中调用：
 
 ```text
-Use $prompt-industrializer to convert this simple prompt into an industrialized YAML rule prompt:
+Use $prompt-industrializer-skill to convert this simple prompt into an industrialized YAML rule prompt:
 判断用户是不是在问信用卡业务，并给出置信分数。
 ```
 
@@ -71,6 +66,20 @@ output_format:
   description: "输出必须是严格 JSON 对象，不能包含额外解释性文字。"
 ```
 
+## 本地创作约定
+
+在 `E:\aipower` 下，后续新创作的 skills 统一放到：
+
+```text
+E:\aipower\created_skills\<skill-folder-name>\
+```
+
+本 skill 的本地路径是：
+
+```text
+E:\aipower\created_skills\prompt-industrializer-skill\
+```
+
 ## 许可
 
-本仓库使用 MIT License。任何人都可以使用、复制、修改和分发这些 skills。
+本仓库使用 MIT License。任何人都可以使用、复制、修改和分发这个 skill。
